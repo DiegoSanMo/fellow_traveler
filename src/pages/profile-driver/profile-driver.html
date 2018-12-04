@@ -1,0 +1,48 @@
+<!--
+  Generated template for the ProfileDriverPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <button ion-button style="background-color: rgba(255, 255, 255, 0.801);">
+        <ion-icon name="close" (click)="closeModal()"></ion-icon>
+    </button>
+    <ion-title>      
+      Información del conductor
+    </ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-grid>
+    <ion-row>
+      <ion-col col-12>
+        <ion-card>
+          <img src="https://banner2.kisspng.com/20180401/klw/kisspng-user-profile-computer-icons-clip-art-profile-5ac092f6f2d337.1560498715225699749946.jpg"/>
+          <ion-card-content>
+            <ion-card-title>
+              Nine Inch Nails Live
+              </ion-card-title>
+            <p>
+              The most popular industrial group ever, and largely
+              responsible for bringing the music to a mass audience.
+            </p>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      <ion-col col-12 style="text-align: center;">
+        <label for="">Ingresa el punto de encuentro y alguna información extra para el conductor</label>
+        <ion-item>
+          <ion-input type="" name="message" [(ngModel)]="message"></ion-input>
+        </ion-item>
+        <br>
+        <button ion-button full (click)="sendNotification()">Enviar solicitud</button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

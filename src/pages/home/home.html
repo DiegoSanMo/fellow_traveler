@@ -1,18 +1,75 @@
+<!-- src/pages/home/home.html -->
+
 <ion-header>
-  <ion-navbar>
-    <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
-    </button>
-    <ion-title>Home</ion-title>
-  </ion-navbar>
-</ion-header>
+    <ion-navbar>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title>Home</ion-title>
+    </ion-navbar>
+  </ion-header>
+  
+  <ion-content padding>
+    <!-- <p *ngIf="auth.loading" text-center>Loading...</p>
+    <ng-template [ngIf]="!auth.loading"> -->
+      <!-- Not loading, not logged in: show login button -->
+      <!-- <button
+        ion-button
+        block
+        color="primary"
+        *ngIf="!auth.loggedIn"
+        (click)="auth.login()">Log In</button> -->
+      <!-- Not loading, logged in: show profile and logout button -->
+      <!-- <ng-template [ngIf]="auth.loggedIn">
+        <ion-card *ngIf="auth.user">
+          <img [src]="auth.user.picture">
+          <ion-card-content>
+            <ion-card-title>{{ auth.user.name }}</ion-card-title>
+            <pre>{{ auth.user | json }}</pre>
+          </ion-card-content>
+        </ion-card>
+        <button
+          ion-button
+          block
+          color="danger"
+          (click)="auth.logout()">Log Out</button>
+      </ng-template>
+    </ng-template> -->
 
-<ion-content padding>
-  <h3>Ionic Menu Starter</h3>
+    <div class="container">
+      <div class="text-center">
+        <h1>Hola {{ userName }} </h1>
+        <h1>Te damos la bienvenida a</h1>
+        <h1><strong>Dame un aventon, primo</strong></h1>
+        <p>
+          Supongo que estas buscando a un buen <strong>samaritano</strong> y has llegado al lugar indicado
+        </p>
+      </div>
+      <img src="https://www.generadormemes.com/media/created/gppvvs.jpg" alt="">
 
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
-  </p>
+    </div>
 
-  <button ion-button secondary menuToggle>Toggle Menu</button>
-</ion-content>
+
+    <div class="contaimer" *ngIf="type === 'driver'">
+      <ion-row>
+        <ion-col col-12>
+          <ion-item>
+            <ion-input type="" placeholder="Ubicación actual" name="origin" [(ngModel)]="origin"></ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col col-12>
+          <ion-item>
+            <ion-input type="" placeholder="Destino" name="destiny" [(ngModel)]="destiny"></ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col col-12>
+          <ion-item>
+            <ion-input type="" placeholder="Hora de salida" name="time" [(ngModel)]="time"></ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col col-12>
+          <button ion-button (click)="saveChanges()" full>Guardar cambios</button>
+        </ion-col>
+      </ion-row>
+    </div>
+  </ion-content>

@@ -1,0 +1,45 @@
+<ion-header>
+	<ion-navbar *ngIf="isLogin">
+		<button ion-button menuToggle>
+			<ion-icon name="menu"></ion-icon>
+		</button>
+		<ion-title>Log in</ion-title>
+	</ion-navbar>
+</ion-header>
+
+<ion-content class="text-center">
+	<div padding-horizontal style="padding-top: 30%;">
+		<h1 style="
+		font-family: sans-serif;
+		font-size: 4rem;
+		font-weight: 100;
+		font-style: italic;
+		padding-bottom: 3px;">
+			Bienvenido a 
+		</h1> 
+		<h1
+			style="
+			font-size: 5rem;
+			font-family: sans-serif;
+			font-weight: 100;
+			color: blue;">
+			Dame un aventon, primo!
+		</h1>
+		<ion-card style="border-radius: 25px;">
+			<img src="http://noticiasprtv.com/wp-content/uploads/2018/02/pididendo-pon.jpg" style="border-radius: 20px;"/>
+			<ion-card-content>
+				<ion-card-title>
+					
+				</ion-card-title>
+					<ion-list>
+						<h5>Ingresar con Google +</h5>
+						<button ion-button icon-left block primary (click)="loginWithGoogle()">
+							<ion-icon name="logo-google"></ion-icon>
+							Log in with Google
+						</button>
+					</ion-list>
+			</ion-card-content>
+		</ion-card>
+	</div>
+	
+</ion-content>
